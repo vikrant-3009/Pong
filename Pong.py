@@ -93,8 +93,21 @@ while True:
     # MOVE THE BALL
     ball.setx(ball.xcor() + ball.dx)
     ball.sety(ball.ycor() + ball.dy)
+    
+    # BORDER CHECKING (FOR PADDLE MOVEMENT)
+    if paddle_a.ycor() >= 255:
+        paddle_a.sety(255)
 
-    # BORDER CHECKING
+    if paddle_a.ycor() <= -250:
+        paddle_a.sety(-250)
+
+    if paddle_b.ycor() >= 255:
+        paddle_b.sety(255)
+
+    if paddle_b.ycor() <= -250:
+        paddle_b.sety(-250)
+
+    # BORDER CHECKING (FOR BALL MOVEMENT)
     if(ball.ycor() >= 290):
         ball.dy *= -1
     
