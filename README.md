@@ -1,2 +1,2 @@
 # Pong
-Classic Ping Pong using Turtle (Python Module).
+Classic Ping Pong Game made using Turtle (Python Module).
